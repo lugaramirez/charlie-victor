@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cies Resume/CV
+% LaTeX Template
+% Version 1.1 (20/7/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Cies Breijs (cies@kde.nl)
+% https://github.com/cies/resume with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
+
+\include{structure} % Include structure.tex which contains packages and document layout definitions
+
+\renewcommand\textbullet{\ensuremath{\bullet}}
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\begin{document} 
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Gabriel Ramirez}{April 9, 1983}  % Your name and date of birth or subtitle
+
+\noindent\href{mailto:luga.ramirez@gmail.com}{luga.ramirez@gmail.com}
+\bull luga.ramirez \textit{(Skype)}
+\bull \href{https://www.linkedin.com/in/lugaramirez/}{lugaramirez} \textit{(LinkedIn)}
+\bull \href{https://github.com/lugaramirez}{lugaramirez} \textit{(GitHub)}\\
+1009 Mcal. Estigarribia
+\bull Asuncion, 1514
+\bull Paraguay % Your address
+
+\spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Summary} % Root section title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis scelerisque vestibulum. Sed ut sapien et dui mollis condimentum. Phasellus enim lectus, dignissim vitae velit sit amet, porttitor tincidunt lectus. Vivamus adipiscing volutpat lacinia. Sed dui ipsum, iaculis id facilisis sed, dapibus quis lacus. Quisque blandit hendrerit malesuada. Nunc sollicitudin nisl nunc, vitae luctus leo tincidunt vel. \textit{Areas of expertise include:}
+
+\vspace{-1em} % Reduce whitespace after the Summary heading and the two-column content
+\begin{multicols}{2}  % Start a two-column layout
+{\bodytext{
+  \begin{itemize}
+    \item more work
+    \item more responsibility
+    \item more satisfaction
+  \end{itemize}
+}}
+\end{multicols}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Experience} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://swnat.com/}{Software Natura}}
+{\textsc{Asuncion, Paraguay}} {
+{\bodytext{Recruited in principle for the experience in Software Architecture and Engineering for establishing a QA policy in the process of software development of a legacy stack, now currently co-leading a team of 6 in order to put in production a microservice architecture for a client requesting an ERP and E-commerce system.}}
+
+\headedsubsection % Job title entry for the current employer
+{Software Engineer}
+{Feb '17 -- present}
+{\bodytext{\textbf{Key Contributions:} 
+\begin{itemize}
+  \item \textbf{Definition of the stack to be used during code development.} By using Spring Framework and Netflix OSS, complete REST services are developed by the team.
+  \item \textbf{Definition of the ops stack to be used to manage servers and services.} Currently using Apache Tomcat and Spring Boot web app files. The use of Docker and Kubernetes is under test to help in the CD process.
+  \item \textbf{Definition of the CD pipeline.} The pipeline now uses only a code repository and with Jenkins, it pushes a new build to the test server, after some basic testing and static code analysis provided by Sonarqube.
+\end{itemize}
+}}
+
+\headedsubsection % Job title entry for the current employer
+{\acr{QA} Engineer}
+{Mar '16 -- Jan '17}
+{\bodytext{\textbf{Key Contributions:} 
+\begin{itemize}
+  \item \textbf{Establishing the use of gitflow as the process of code repository management.} Since there was no system before, it was a hard challenge to teach every devolper the full powers of git.
+  \item \textbf{Establishing the new modules/layering system of the code.} It was done so it would help writing the before inexistent unit- and integration-tests. End-to-end tests were left to the future, although some smoke tests were written.
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://www.opendream.th}{Opendream}}
+{\textsc{Bangkok, Thailand}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{IT} Consultant}
+{Aug '09 -- Sep '09}
+{\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming. Coached their development team on system design, Ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
+}
+
+%------------------------------------------------
+
+\begin{center}
+\textit{Please refer to \href{http://www.linkedin.com/in/lugaramirez}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
+\end{center}
+
+%------------------------------------------------
+
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Education} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Erasmus University Rotterdam}
+{\textsc{Rotterdam, The Netherlands}} {
+
+\headedsubsection % Job title entry for the current employer
+{Bachelor degree in Computer Science \& Economics}
+{2004 -- 2007}
+{\bodytext{Focussed on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Technical University Delft}
+{\textsc{Delft, The Netherlands}} {
+
+\headedsubsection % Job title entry for the current employer
+{Industrial Design Engineering \textnormal{(discontinued)}}
+{2001 -- 2002} {}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Libanon Lyceum}
+{\textsc{Rotterdam, The Netherlands}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{VWO} \textnormal{(pre-university secondary education)}}
+{1994 -- 2000} {}
+}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Skills} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Technical specialties:}
+{Software design and implementation, with(in) a team. I love Ruby/Python/Java/C++ and flirt regularly with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson/Jenkins).}
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Natural languages:}
+{Spanish \textit{(native language)}, English \textit{(full professional proficiency)}, German \textit{(limited working proficiency)}, French \textit{(elementary proficiency)}.}
+
+%------------------------------------------------
+
+\end{document}
