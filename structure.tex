@@ -39,6 +39,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{microtype} % Slightly tweaks character and word spacings for better typography
 
+\usepackage{enumitem}
+
 \pagestyle{empty} % Stop page numbering
 
 %----------------------------------------------------------------------------------------
@@ -74,3 +76,5 @@
 \newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]} % A custom vspace command with custom before and after spacing lengths that do not break the page
 
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}} % Defines a horizontal line with some vertical space before and after it
+
+\renewcommand\textbullet{\ensuremath{\bullet}}
