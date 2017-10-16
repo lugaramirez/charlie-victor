@@ -1,0 +1,271 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cies Resume/CV
+% LaTeX Template
+% Version 1.1 (20/7/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Cies Breijs (cies@kde.nl)
+% https://github.com/cies/resume with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\include{structure} % Include structure.tex which contains packages and document layout definitions
+
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\begin{document} 
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Gabriel Ramirez}{Abril 9, 1983}  % Your name and date of birth or subtitle
+
+\noindent\href{mailto:luga.ramirez@gmail.com}{luga.ramirez@gmail.com}
+\bull luga.ramirez \textit{(Skype)}
+\bull \href{https://www.linkedin.com/in/lugaramirez/}{lugaramirez} \textit{(LinkedIn)}
+\bull \href{https://github.com/lugaramirez}{lugaramirez} \textit{(GitHub)}\\
+1009 Mcal. Estigarribia
+\bull Asunción, 1514
+\bull Paraguay % Your address
+
+\spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Resumen} % Root section title
+
+Diseañador de soluciones para negocios. Más de 10 años de experiencia en una multitud de ambientes. Con la habilidad de combinar visión e ingenio para proveer soluciones con miras al futuro. Capacidad de liderazgo comprobada. \textit{Las áreas de conocimiento incluyen:}
+
+\vspace{-1em} % Reduce whitespace after the Summary heading and the two-column content
+\begin{multicols}{2}  % Start a two-column layout
+{\bodytext{
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Arquitectura e ingeniería de software.
+    \item Desarrollo full-stack de software.
+    \item Metodología Agile de desarrollo de software.
+    \item Tecnologías IaaS.
+    \item Herramientas de integración/despliegue continuo.
+    \item Ingeniería electrónica.
+    \item Diseño de hardware y software embebido.
+    \item Diseño de infraestructura de Datacenters.
+    \item Diseño de redes.
+    \item Liderazgo.
+  \end{itemize}
+}}
+\end{multicols}
+
+\spacedhrule{1em}{1em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Experiencia} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://swnat.com/}{Software Natura}}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Reclutado en principio por la experiencia en arquitectura e ingeniería de software con el fin de establecer una política de calidad de código en un stack legado, actualmente co-líder de un equipo de 6 encargados de poner en producción microservicios para clientes que requieren de software del tipo ERP y de comercio electrónico.}}
+
+\headedsubsection % Job title entry for the current employer
+{Ingeniero de Software}
+{Feb '17 -- presente}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Definición del stack a ser usado durante el desarrollo del software.} Usando Spring Framework y Netflix OSS, el equipo desarrolla servicios completamente REST.
+  \item \textbf{Definición del stack de operaciones para manejar los servidores y servicios.} Actualmente se utiliza Apache Tomcat y archivos generados con Spring Boot. El uso de Docker y Kubernetes está siendo probado para ayudar en el proceso de despliegue continuo.
+  \item \textbf{Definición del proceso de despliegue continuo.} El proceso incluye el uso de un repositorio que a través de Jenkins que prueba, construye, y despliega el nuevo código al servidor de test. Análisis de código estático es también hecho con Sonarqube.
+\end{itemize}
+}}
+
+\headedsubsection % Job title entry for the current employer
+{Ingeniero de Calidad}
+{May '16 -- Ene '17}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Establecimiento de gitflow para el manejo del repositorio.}
+  \item \textbf{Establecimiento del esquema de capas/módulos para el código.}
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Santco \acr{SRL}}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Siendo esta una empresa nueva buscando proveer soluciones de software a sus clientes, la misma necesitaba desarrolladores experimentados para ayudar a los desarrolladores junior ya existentes en la misma.}}
+
+\headedsubsection % Job title entry for the current employer
+{Ingeniero de Software \& Líder de Equipo}
+{Nov '14 -- Mar '16}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Implementación de la metodología de desarrollo Agile utilizando Scrum.}
+  \item \textbf{Establecimiento del stack de tecnología a ser usado en la compañía.} Debido a las restricciones y las capacidades de los desarrolladores ya existentes, se eligió CakePHP. Además, el proveedor de IaaS Google Cloud fue electo.
+\end{itemize}
+}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://www.technoma.com.py/}{Technoma \acr{SACI}}}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Miembro fundador de la empresa, la idea original de la misma era la de proveer la última tecnología en las soluciones dadas a los clientes.}}
+
+\headedsubsection % Job title entry for the current employer
+{Ingeniero de campo}
+{Mar '10 -- Jul '12}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Definición de la tecnología utilizada fuera del área de redes.} Como los clientes tenían requerimientos cerrados con respecto a las marcas de equipos a ser usados, el software de soporte siempre fue desarrollado de manera artesanal y dependiendo del cliente. Las herramientas abiertas utilizadas fueron cacti, nagios, y otros.
+  \item \textbf{Establecimiento de Monitoring-as-a-Service como un negocio para la empresa.}
+\end{itemize}
+}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{https://www.cba.com.py/}{\acr{CBA} \acr{SA}}}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Una empresa bien establecida proveyendo SaaS en servidores propios, con necesidad de experiencia en virtualización de servidores y alocación de recursos.}}
+
+\headedsubsection % Job title entry for the current employer
+{Consultor de Tecnología}
+{Mar '11 -- Oct '11}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Establecimiento del stack de virtualización y alocación de recursos.} Usando Citrix XenServer.
+\end{itemize}
+}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Ministerio del Interior}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Buscando reclutar ayuda para el diseño del Centro de Seguridad y Emergencias (CSE) de la Policía Nacional.}}
+
+\headedsubsection % Job title entry for the current employer
+{Consultor de Tecnología}
+{Mar '10 -- Mar '11}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Diseño de la infraestructura física de la red y los datacenters.} El producto fue una red resistente a errores capaz de sotener transmisión y guardado de datos de video en tiempo real.
+  \item \textbf{Evaluación del ganador de la licitación del proyecto.}
+\end{itemize}
+  
+}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://www.universidadcatolica.edu.py/}{Universidad Católica de Asunción}}
+{\textsc{Asunción, Paraguay}} {
+{\bodytext{Luego de pasar un tested muy riguroso, el contrato fue en principio a consecuencia de las necesidades de una persona con experiencia en ingeniería electrónicapor parte de la universidad. Luego de obtenida la licenciatura, la promoción fue al laboratorio de investigaciones de la institución.}}
+
+\headedsubsection % Job title entry for the current employer
+{Investigador Junior}
+{Oct '07 -- Abr '10}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Definición del hardware a ser usado por el equipo del proyecto ``CompuBus``.} Utilizando microcontroladores y computadoras de pequeño tamaño, se desarrolló software embebido en C and C++.
+\end{itemize}
+  
+}}
+
+\headedsubsection % Job title entry for the current employer
+{Administrador de Sistemas}
+{Oct '05 -- Oct '07}
+{\bodytext{\textbf{Contribuciones clave:} 
+\begin{itemize}
+  \item \textbf{Automatización del mantenimiento de los servidores.}
+  \item \textbf{Mantenimiento de la estructura física de la red y los laboratorios de computadoras.}
+\end{itemize}
+}}
+}
+
+%------------------------------------------------
+
+\begin{center}
+\textit{Favor referirse a \href{http://www.linkedin.com/in/lugaramirez?locale=es_ES}{mi perfil de Linkedin} para obtener la lista completa de experiencia así como las recomendaciones.}
+\end{center}
+
+%------------------------------------------------
+
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Educación} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Universidad de Lovaina}
+{\textsc{Lovaina, Bélgica}} {
+
+\headedsubsection % Job title entry for the current employer
+{Maestría en Nanociencia y Nanotecnología}
+{2012 -- 2014}
+{\bodytext{Área de especialización: Bionanotecnología.}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Universidad Católica de Asunción}
+{\textsc{Asunción, Paraguay}} {
+
+\headedsubsection % Job title entry for the current employer
+{Ingeniería Electrónica \textnormal{(no finalizada)}}
+{2007 -- 2010} {}
+
+\headedsubsection % Job title entry for the current employer
+{Licenciatura en Ingeniería Electrónica}
+{2002 -- 2006} {}
+}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Habilidades} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Especialidades técnicas:}
+{Diseño e implementación de software con/en un equipo. C, C++, Java, JavaScript, Python. Sólido conocimiento de tecnologías web de back-end, en particular \acr{X/YML}, \acr{JSON}, \acr{REST}. Conocimiento básico de tecnologías web front-end (jQuery, Angular, React). Habilidades de administración en Linux:\ bash, NGINX, Apache, Tomcat, Glassfish, Payara, My\acr{SQL}, Postgres\acr{SQL}, \acr{SQL}Server, cloud (\acr{AWS}, Azure, Google Cloud), automatización de datacenter (Terraform), integración continua (Jenkins), y containerización (Docker).}
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Idiomas:}
+{Español \textit{(idioma madre)}, Inglés \textit{(competencia profesional)}, Alemán \textit{(competencia básica)}, Francés \textit{(competencia de comprensión básica)}.}
+
+%------------------------------------------------
+
+\end{document}
