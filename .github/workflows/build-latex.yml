@@ -23,9 +23,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
           
-      - name: LaTeX Action
+      - name: Build LaTeX
         # You may pin to the exact commit or the version.
         # uses: fudan-mse/latex-action@eb2eb7ba472011213ac0a6286fd776494623362c
         uses: fudan-mse/latex-action@v0.0.1
@@ -33,7 +34,7 @@ jobs:
           # The root LaTeX file to be compiled
           root_file: cv_11.tex
           
-      - name: Add & Commit
+      - name: Push changes
         # You may pin to the exact commit or the version.
         # uses: EndBug/add-and-commit@2bdc0a61a03738a1d1bda24d566ad0dbe3083d87
         uses: EndBug/add-and-commit@v7.2.1
@@ -43,6 +44,6 @@ jobs:
           # The message for the commit
           message: 'updated cv pdf'
           # The flag used on the pull strategy. Use NO-PULL to avoid the action pulling at all.
-          pull_strategy: '--rebase'
+          pull_strategy: 'NO-PULL'
           # Whether to push the commit and, if any, its tags to the repo. It can also be used to set the git push arguments (more info in the README)
           push: true
