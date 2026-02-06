@@ -21,13 +21,11 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\include{structure} % Include structure.tex which contains packages and document layout definitions
+\include{structure-sp} % Include structure-sp.tex which contains packages and document layout definitions
 
 \hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
 
-\begin{document} 
+\begin{document}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
@@ -36,12 +34,12 @@
 \maintitle{Gabriel Ramirez}{Abril 9, 1983}  % Your name and date of birth or subtitle
 
 \noindent\href{mailto:luga.ramirez@gmail.com}{luga.ramirez@gmail.com}
-\bull luga.ramirez \textit{(Skype)}
+\ifdefined\nophone\else\bull \textsmaller{+}31 626-957064\fi
 \bull \href{https://www.linkedin.com/in/lugaramirez/}{lugaramirez} \textit{(LinkedIn)}
-\bull \href{https://github.com/lugaramirez}{lugaramirez} \textit{(GitHub)}\\
-1009 Mcal. Estigarribia
-\bull Asunción, 1514
-\bull Paraguay % Your address
+\bull \href{https://github.com/lugaramirez}{lugaramirez} \textit{(GitHub)}
+\bull Marius Bauerstraat 30-B4
+\bull Ámsterdam, 1062AR
+\bull Países Bajos % Your address
 
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
 
@@ -51,27 +49,26 @@
 
 \roottitle{Resumen} % Root section title
 
-Diseañador de soluciones para negocios. Más de 10 años de experiencia en una multitud de ambientes. Con la habilidad de combinar visión e ingenio para proveer soluciones con miras al futuro. Capacidad de liderazgo comprobada. \textit{Las áreas de conocimiento incluyen:}
+Ingeniero de Backend y Plataforma con más de 10 años de experiencia diseñando sistemas distribuidos, liderando equipos de ingeniería y entregando software en los dominios de comercio electrónico, fintech, salud y seguridad pública. Capacidad comprobada para simplificar arquitecturas complejas mediante Domain-Driven Design y principios de código limpio. \textit{Las áreas de conocimiento incluyen:}
 
 \vspace{-1em} % Reduce whitespace after the Summary heading and the two-column content
 \begin{multicols}{2}  % Start a two-column layout
 {\bodytext{
   \begin{itemize}[noitemsep,nolistsep]
     \item Arquitectura e ingeniería de software.
-    \item Desarrollo full-stack de software.
-    \item Metodología Agile de desarrollo de software.
+    \item Desarrollo Agile de software.
     \item Tecnologías IaaS.
-    \item Herramientas de integración/despliegue continuo.
+    \item Herramientas de CI/CD.
     \item Ingeniería electrónica.
     \item Diseño de hardware y software embebido.
-    \item Diseño de infraestructura de Datacenters.
+    \item Diseño de infraestructura de datacenters.
     \item Diseño de redes.
     \item Liderazgo.
   \end{itemize}
 }}
 \end{multicols}
 
-\spacedhrule{1em}{1em} % Horizontal rule - the first bracket is whitespace before and the second is after
+\spacedhrule{-1em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE SECTION
@@ -79,132 +76,190 @@ Diseañador de soluciones para negocios. Más de 10 años de experiencia en una 
 
 \roottitle{Experiencia} % Top level section
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
+{\href{https://bol.com}{bol.}}
+{\textsc{Utrecht, Países Bajos}} {
+
+\headedsubsection
+{Ingeniero de Software}
+{Nov '23 -- Presente}
+{\bodytext{\textbf{Contribuciones clave:}
+\begin{itemize}
+  \item \textbf{Desarrollo y mantenimiento de servicios backend a escala} (20M+ usuarios, 95k+ req/s combinados móvil y web) en Go, Java, Kotlin y Python, incluyendo el router de borde de la empresa, conectores GraphQL y un monolito legado en migración hacia una arquitectura de microfrontends.
+  \item \textbf{Liderando la migración del manejo de login del monolito a un handler basado en eventos,} permitiendo a otros equipos agregar acciones post-login como la fusión de listas de deseos entre modo anónimo y autenticado.
+  \item \textbf{Miembro activo de una comunidad de calidad de 4 personas a nivel empresa,} impulsando la adopción de prácticas de testing y calidad de código en una organización de ingeniería multi-lenguaje.
+  \item \textbf{Liderando la definición de restricciones de calidad y configuraciones para generación de código asistida por \acr{IA}} (Claude) en toda la empresa.
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection
+{\href{https://quin.md/nl}{Quin}}
+{\textsc{Ámsterdam, Países Bajos}} {
+{\bodytext{Reclutado como Tech Lead para el recién creado equipo de integraciones; luego promovido a Tech Lead del equipo de plataforma, donde el equipo reestructuró todo el backend mediante Domain-Driven Design.}}
+
+\headedsubsection
+{Tech Lead}
+{Sep '21 -- Oct '23}
+{\bodytext{\textbf{Contribuciones clave:}
+\begin{itemize}
+  \item \textbf{Definí y mantuve librerías compartidas de backend} adoptadas por todos los equipos de ingeniería.
+  \item \textbf{Estandaricé los flujos de trabajo de desarrollo backend} incluyendo procesos de Git, prácticas de revisión de código y pipelines de \acr{CI/CD}.
+  \item \textbf{Lideré un equipo de 3 personas en la consolidación de 70+ microservicios en un único monolito modular basado en eventos} con 5 dominios acotados y 3 servicios de capa anti-corrupción, aplicando Domain-Driven Design en todo el proceso.
+  \item \textbf{Reduje los costos anuales de infraestructura de \$2M+ a menos de \$300K} (85\%+ de ahorro), aceleré los despliegues de trimestrales a cada merge a main, y reduje el tiempo de onboarding de desarrolladores de casi un año a días al alinear la arquitectura con prácticas estándar de Spring Boot.
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection
+{\href{http://backbase.com/}{Backbase}}
+{\textsc{Ámsterdam, Países Bajos}} {
+{\bodytext{Reclutado como trainer de Backend para la plataforma bancaria core de Backbase; promovido al departamento de I+D para desarrollar ''Digital Sales,'' un producto que permite el onboarding de clientes bancarios con verificación de identidad automatizada, firma de documentos e integraciones de notificaciones.}}
+
+\headedsubsection
+{Ingeniero de Backend}
+{May '20 -- Ago '21}
+{\bodytext{\textbf{Contribuciones clave:}
+\begin{itemize}
+  \item \textbf{Arquitecté un template de librería de conectores para integraciones con \acr{API}s de terceros} (verificación de identidad, \acr{SMS}/email, firma de documentos); construí personalmente 5 conectores, crecimos a 12 con el equipo, y el template permitió 50+ conectores tras mi partida.
+  \item \textbf{Automaticé pipelines de \acr{CI/CD} para lograr releases sin intervención humana,} moviendo la detección de bugs a tiempo de build y reduciendo re-releases de dos veces por semana a una vez por trimestre. El producto sirvió a 5 clientes bancarios.
+\end{itemize}
+}}
+
+\headedsubsection
+{Trainer de Backend}
+{Ene '20 -- May '20}
+{\bodytext{Impartí 3 sesiones de capacitación de una semana sobre la plataforma bancaria core de Backbase, entrenando aproximadamente 30 ingenieros de clientes antes de que el rol cambiara debido a la pandemia global.}}
+
+}
+
+%------------------------------------------------
+
+\headedsection
 {\href{http://swnat.com/}{Software Natura}}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Reclutado en principio por la experiencia en arquitectura e ingeniería de software con el fin de establecer una política de calidad de código en un stack legado, actualmente co-líder de un equipo de 6 encargados de poner en producción microservicios para clientes que requieren de software del tipo ERP y de comercio electrónico.}}
+{\bodytext{Consultora de software proveyendo servicios de desarrollo a clientes internacionales.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Ingeniero de Software}
-{Feb '17 -- presente}
-{\bodytext{\textbf{Contribuciones clave:} 
+{Feb '17 -- Dic '19}
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Definición del stack a ser usado durante el desarrollo del software.} Usando Spring Framework y Netflix OSS, el equipo desarrolla servicios completamente REST.
-  \item \textbf{Definición del stack de operaciones para manejar los servidores y servicios.} Actualmente se utiliza Apache Tomcat y archivos generados con Spring Boot. El uso de Docker y Kubernetes está siendo probado para ayudar en el proceso de despliegue continuo.
-  \item \textbf{Definición del proceso de despliegue continuo.} El proceso incluye el uso de un repositorio que a través de Jenkins que prueba, construye, y despliega el nuevo código al servidor de test. Análisis de código estático es también hecho con Sonarqube.
+  \item \textbf{Lideré un equipo consultor de 7 personas entregando soluciones full-stack para Dennis Kirk,} el segundo mayor retailer especializado en powersports de Estados Unidos (catálogo de 185k+ partes), colaborando con 5 desarrolladores en EE.UU.
+  \item \textbf{Desarrollé un módulo de kernel Linux en C} como puente entre una aplicación legacy de call center en Java/Struts y un mainframe \acr{COBOL}, luego reimplementé el call center como un monolito modular en Spring Boot + Angular con límites de dominio definidos.
+  \item \textbf{Construí una aplicación de predicción de stock} usando Spring Framework y Angular.
 \end{itemize}
 }}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Ingeniero de Calidad}
 {May '16 -- Ene '17}
-{\bodytext{\textbf{Contribuciones clave:} 
-\begin{itemize}
-  \item \textbf{Establecimiento de gitflow para el manejo del repositorio.}
-  \item \textbf{Establecimiento del esquema de capas/módulos para el código.}
-\end{itemize}
-}}
+{\bodytext{Establecí estándares de calidad de código para elumen, un monolito legado \acr{CRM} de 100k+ líneas sirviendo a community colleges estadounidenses, dentro de un equipo de 50 desarrolladores. Aumenté la cobertura de tests de cero a 60\%, moviendo la detección de bugs de semanas de feedback de usuarios a detección en tiempo de build por desarrolladores.}}
 
 }
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {Santco \acr{SRL}}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Siendo esta una empresa nueva buscando proveer soluciones de software a sus clientes, la misma necesitaba desarrolladores experimentados para ayudar a los desarrolladores junior ya existentes en la misma.}}
+{\bodytext{Empresa de software sirviendo a clientes de alto perfil paraguayos en ganadería, logística y manufactura.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Ingeniero de Software \& Líder de Equipo}
 {Nov '14 -- Mar '16}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Implementación de la metodología de desarrollo Agile utilizando Scrum.}
-  \item \textbf{Establecimiento del stack de tecnología a ser usado en la compañía.} Debido a las restricciones y las capacidades de los desarrolladores ya existentes, se eligió CakePHP. Además, el proveedor de IaaS Google Cloud fue electo.
+  \item \textbf{Implementé desarrollo Agile usando Scrum} para un equipo de hasta 8 desarrolladores construyendo aplicaciones full-stack en \acr{PHP} y jQuery.
+  \item \textbf{Entregué 4 aplicaciones de automatización de procesos} en CakePHP y Google Cloud para la principal casa de subastas de ganado, la mayor empresa de logística y el principal fabricante de cuero de Paraguay --- permitiendo, por ejemplo, a la casa de subastas aumentar los eventos de remate de semanales a cada dos días.
 \end{itemize}
 }}
 }
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {\href{http://www.technoma.com.py/}{Technoma \acr{SACI}}}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Miembro fundador de la empresa, la idea original de la misma era la de proveer la última tecnología en las soluciones dadas a los clientes.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Ingeniero de campo}
 {Mar '10 -- Jul '12}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Definición de la tecnología utilizada fuera del área de redes.} Como los clientes tenían requerimientos cerrados con respecto a las marcas de equipos a ser usados, el software de soporte siempre fue desarrollado de manera artesanal y dependiendo del cliente. Las herramientas abiertas utilizadas fueron cacti, nagios, y otros.
-  \item \textbf{Establecimiento de Monitoring-as-a-Service como un negocio para la empresa.}
+  \item \textbf{Diseñé y supervisé despliegues de red en más de 500 sitios} para clientes bancarios con redes de sucursales a nivel nacional.
+  \item \textbf{Lideré el mayor despliegue de 200 sucursales} con más de 1.000 terminales NUC y servicios de impresión para clientes incluyendo documentos, formularios e informes.
 \end{itemize}
 }}
+
 }
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {\href{https://www.cba.com.py/}{\acr{CBA} \acr{SA}}}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Una empresa bien establecida proveyendo SaaS en servidores propios, con necesidad de experiencia en virtualización de servidores y alocación de recursos.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Consultor de Tecnología}
 {Mar '11 -- Oct '11}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Establecimiento del stack de virtualización y alocación de recursos.} Usando Citrix XenServer.
+  \item \textbf{Establecí el stack de virtualización y alocación de recursos} usando Citrix XenServer, consolidando la infraestructura de 15 clientes en un modelo de aprovisionamiento compartido bajo demanda.
 \end{itemize}
 }}
 }
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {Ministerio del Interior}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Buscando reclutar ayuda para el diseño del Centro de Seguridad y Emergencias (CSE) de la Policía Nacional.}}
+{\bodytext{Reclutado para diseñar el Centro de Seguridad y Emergencias (\acr{CSE}) a nivel nacional para la Policía Nacional, el sistema de servicios de emergencia equivalente al 911 de Paraguay.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Consultor de Tecnología}
 {Mar '10 -- Mar '11}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Diseño de la infraestructura física de la red y los datacenters.} El producto fue una red resistente a errores capaz de sotener transmisión y guardado de datos de video en tiempo real.
-  \item \textbf{Evaluación del ganador de la licitación del proyecto.}
+  \item \textbf{Diseñé la infraestructura física de red y datacenters} para una red óptica resiliente de \$500M+ a nivel nacional abarcando las principales áreas metropolitanas de Paraguay, soportando decenas de miles de cámaras en las calles y despacho coordinado de policía, bomberos y ambulancias en tiempo real.
 \end{itemize}
-  
+
 }}
 }
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {\href{http://www.universidadcatolica.edu.py/}{Universidad Católica de Asunción}}
 {\textsc{Asunción, Paraguay}} {
-{\bodytext{Luego de pasar un test muy riguroso, el contrato fue en principio a consecuencia de las necesidades de una persona con experiencia en ingeniería electrónica por parte de la universidad. Luego de obtenida la licenciatura, la promoción fue al laboratorio de investigaciones de la institución.}}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Investigador Junior}
 {Oct '07 -- Abr '10}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Definición del hardware a ser usado por el equipo del proyecto ``CompuBus``.} Utilizando microcontroladores y computadoras de pequeño tamaño, se desarrolló software embebido en C and C++.
+  \item \textbf{Definí la plataforma de hardware para el proyecto de investigación ''CompuBus''} en un equipo de 5 ingenieros, desarrollando software embebido en C y C++ en microcontroladores y computadoras de pequeño formato, incluyendo módulos de comunicación a nivel de kernel Linux. Entregué un prototipo funcional desplegado con una empresa de transporte.
 \end{itemize}
-  
+
 }}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Administrador de Sistemas}
 {Oct '05 -- Oct '07}
-{\bodytext{\textbf{Contribuciones clave:} 
+{\bodytext{\textbf{Contribuciones clave:}
 \begin{itemize}
-  \item \textbf{Automatización del mantenimiento de los servidores.}
-  \item \textbf{Mantenimiento de la estructura física de la red y los laboratorios de computadoras.}
+  \item \textbf{Administré aproximadamente 30 servidores de servicios de internet} y 4 laboratorios de computadoras con un total de más de 200 estaciones de trabajo.
+  \item \textbf{Automaticé el mantenimiento de laboratorios,} reduciendo el tiempo de reconstrucción de fin de semestre de semanas a horas por fin de semana, y convertí las actualizaciones manuales de servidores en despliegues automatizados sin supervisión.
 \end{itemize}
 }}
+
 }
 
 %------------------------------------------------
@@ -223,11 +278,11 @@ Diseañador de soluciones para negocios. Más de 10 años de experiencia en una 
 
 \roottitle{Educación} % Top level section
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {Universidad de Lovaina}
 {\textsc{Lovaina, Bélgica}} {
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Maestría en Nanociencia y Nanotecnología}
 {2012 -- 2014}
 {\bodytext{Área de especialización: Bionanotecnología.}}
@@ -235,15 +290,15 @@ Diseañador de soluciones para negocios. Más de 10 años de experiencia en una 
 
 %------------------------------------------------
 
-\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+\headedsection
 {Universidad Católica de Asunción}
 {\textsc{Asunción, Paraguay}} {
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Ingeniería Electrónica \textnormal{(no finalizada)}}
 {2007 -- 2010} {}
 
-\headedsubsection % Job title entry for the current employer
+\headedsubsection
 {Licenciatura en Ingeniería Electrónica}
 {2002 -- 2006} {}
 }
@@ -256,15 +311,25 @@ Diseañador de soluciones para negocios. Más de 10 años de experiencia en una 
 
 \roottitle{Habilidades} % Top level section
 
-\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
-{Especialidades técnicas:}
-{Diseño e implementación de software con/en un equipo. C, C++, Java, JavaScript, Python. Sólido conocimiento de tecnologías web de back-end, en particular \acr{X/YML}, \acr{JSON}, \acr{REST}. Conocimiento básico de tecnologías web front-end (jQuery, Angular, React). Habilidades de administración en Linux:\ bash, NGINX, Apache, Tomcat, Glassfish, Payara, My\acr{SQL}, Postgres\acr{SQL}, \acr{SQL}Server, cloud (\acr{AWS}, Azure, Google Cloud), automatización de datacenter (Terraform), integración continua (Jenkins), y containerización (Docker).}
+\inlineheadsection
+{Lenguajes:}
+{Java, Kotlin, Go, Python, C, C++, JavaScript, \acr{PHP}, \acr{SQL}.}
 
-%------------------------------------------------
+\inlineheadsection
+{Frameworks y Librerías:}
+{Spring Boot, Netflix \acr{OSS}, CakePHP, jQuery, Angular, React.}
 
-\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+\inlineheadsection
+{Infraestructura y DevOps:}
+{\acr{AWS}, Azure, Google Cloud, Terraform, Docker, Kubernetes, Jenkins, SonarQube, GitLab \acr{CI/CD}, GitHub Actions, NGINX, Apache, Tomcat, Postgres\acr{SQL}, My\acr{SQL}, \acr{SQL}Server.}
+
+\inlineheadsection
+{Metodologías:}
+{Agile, Scrum, Domain-Driven Design, Clean Architecture, Microservices.}
+
+\inlineheadsection
 {Idiomas:}
-{Español \textit{(idioma madre)}, Inglés \textit{(competencia profesional)}, Alemán \textit{(competencia básica)}, Francés \textit{(competencia de comprensión básica)}.}
+{Español \textit{(idioma madre)}, Guaraní \textit{(idioma madre)}, Inglés \textit{(competencia profesional completa)}, Alemán \textit{(competencia laboral limitada)}, Francés \textit{(competencia elemental)}.}
 
 %------------------------------------------------
 

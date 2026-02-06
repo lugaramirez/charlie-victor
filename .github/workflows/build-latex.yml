@@ -1,49 +1,37 @@
-# This is a basic workflow to help you get started with Actions
+name: Build CVs
 
-name: Update PDF
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [master]
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v2
-          
-      - name: Build LaTeX
-        # You may pin to the exact commit or the version.
-        # uses: fudan-mse/latex-action@eb2eb7ba472011213ac0a6286fd776494623362c
-        uses: fudan-mse/latex-action@v0.0.1
+        uses: actions/checkout@v4
+
+      - name: Build English CV (public, no phone)
+        uses: xu-cheng/latex-action@v1
         with:
-          # The root LaTeX file to be compiled
-          root_file: cv_11.tex
-          
-      - name: Push changes
-        # You may pin to the exact commit or the version.
-        # uses: EndBug/add-and-commit@2bdc0a61a03738a1d1bda24d566ad0dbe3083d87
-        uses: EndBug/add-and-commit@v7.2.1
+          pre_compile: printf '\\def\\nophone{}\\input{cv_11}' > cv_11_public.tex
+          root_file: cv_11_public.tex
+          post_compile: mv cv_11_public.pdf cv_11.pdf
+
+      - name: Build Spanish CV (public, no phone)
+        uses: xu-cheng/latex-action@v1
         with:
-          # Arguments for the git add command
-          add: 'cv_11.pdf'
-          # The message for the commit
-          message: 'updated cv pdf'
-          # The flag used on the pull strategy. Use NO-PULL to avoid the action pulling at all.
-          pull_strategy: 'NO-PULL'
-          # Whether to push the commit and, if any, its tags to the repo. It can also be used to set the git push arguments (more info in the README)
-          push: true
+          pre_compile: printf '\\def\\nophone{}\\input{cv_11-sp}' > cv_11-sp_public.tex
+          root_file: cv_11-sp_public.tex
+          post_compile: mv cv_11-sp_public.pdf cv_11-sp.pdf
+
+      - name: Commit PDFs
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'build: update cv pdfs'
+          file_pattern: 'cv_11.pdf cv_11-sp.pdf'
