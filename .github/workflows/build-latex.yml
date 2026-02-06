@@ -16,14 +16,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build English CV (public, no phone)
-        uses: xu-cheng/latex-action@v1
+        uses: xu-cheng/latex-action@v4
         with:
           pre_compile: printf '\\def\\nophone{}\\input{cv_11}' > cv_11_public.tex
           root_file: cv_11_public.tex
           post_compile: mv cv_11_public.pdf cv_11.pdf
 
       - name: Build Spanish CV (public, no phone)
-        uses: xu-cheng/latex-action@v1
+        uses: xu-cheng/latex-action@v4
         with:
           pre_compile: printf '\\def\\nophone{}\\input{cv_11-sp}' > cv_11-sp_public.tex
           root_file: cv_11-sp_public.tex
