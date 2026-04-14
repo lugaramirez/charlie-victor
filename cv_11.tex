@@ -90,7 +90,7 @@ I specialize in simplifying architectures that have grown too complex for the te
 {Tech Lead}
 {Sep '21 -- Oct '23}
 {\bodytext{
-\textit{The situation: a Germany expansion attempt that exposed the microservices architecture collapsing under its own weight --- a feature as simple as showing a doctor their patient list took 6 to 8 months to ship, infrastructure costs exceeded \$2M annually, deployments were quarterly, and onboarding a new developer took nearly a year.}
+\textit{The core problems: a microservices architecture collapsing under its own weight --- a feature as simple as showing a doctor their patient list took 6 to 8 months to ship, infrastructure costs exceeded \$2M annually, deployments were quarterly, and onboarding a new developer took nearly a year.}
 \begin{itemize}
   \item Diagnosed the shared commons library as the most immediate drag --- accumulated RestTemplate clients for every service in the landscape, loaded by every microservice regardless of need; stripped it down, cutting individual service footprint by 20\%+.
   \item Standardized Git workflows, code review practices, and \acr{CI/CD} pipelines across all backend teams.
@@ -112,7 +112,7 @@ I specialize in simplifying architectures that have grown too complex for the te
 {Tech Lead}
 {May '20 -- Aug '21}
 {\bodytext{
-\textit{The two core problems: an integration strategy built around one-off scenario forms with no reusable components across them, and a release process so fragile that every deployment broke something.}
+\textit{The core problems: an integration strategy built around one-off scenario forms with no reusable components across them, and a release process so fragile that every deployment broke something.}
 \begin{itemize}
   \item Diagnosed that the scenario forms shared underlying integration components (identity verification, \acr{SMS}/email, document signing) being reimplemented repeatedly; redesigned the approach around composable connectors --- personally built 5, the template grew to 12 with the team, and enabled 20+ connectors after departure.
   \item Diagnosed the release failures as a testing gap; introduced acceptance tests and hands-on testing practices across the team, cutting re-releases from twice weekly to once per quarter across 5 banking clients.
@@ -137,7 +137,7 @@ I specialize in simplifying architectures that have grown too complex for the te
 {Team Lead}
 {Feb '17 -- Dec '19}
 {\bodytext{
-\textit{Two sequential problems: a Java call center application that couldn't communicate with a \acr{COBOL} mainframe (one month, declared impossible by everyone else), followed by a request to ``update'' the call center that warranted a full architectural diagnosis.}
+\textit{The core problems: a Java call center application that couldn't communicate with a \acr{COBOL} mainframe (one month, declared impossible by everyone else), followed by a request to ``update'' the call center that warranted a full architectural diagnosis.}
 \begin{itemize}
   \item Built a C-based Linux kernel module to bridge the Java/Struts application to the \acr{COBOL} mainframe --- the only viable path across a hard process boundary --- and delivered within the one-month deadline.
   \item When asked to update the call center, diagnosed it as beyond patching; made the call for a full revamp in Spring Boot and Angular with domain-driven boundaries, and brought in a data specialist for Apache Spark search rather than attempting it without domain expertise.
@@ -163,7 +163,7 @@ I specialize in simplifying architectures that have grown too complex for the te
 {Software Engineer \& Team Lead}
 {Nov '14 -- Mar '16}
 {\bodytext{
-\textit{The decision was to introduce Scrum before building anything --- recognizing that delivery reliability, not technical capability, was the actual constraint.}
+\textit{The core problem: clients with zero tolerance for downtime and no existing software for their most critical operations --- delivery reliability, not technical capability, was the actual constraint.}
 \begin{itemize}
   \item Structured a team of up to 8 developers around Agile iteration cycles, replacing ad-hoc delivery with predictable, testable releases.
   \item Delivered 4 process-automation applications on CakePHP and Google Cloud for Paraguay's leading cattle auction house, largest logistics company, and top leather manufacturer --- the auction house trusted the software enough to increase bidding events from weekly to every two days.
