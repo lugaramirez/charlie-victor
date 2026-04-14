@@ -70,8 +70,8 @@ I specialize in simplifying architectures that have grown too complex for the te
 {\bodytext{
 \textit{The core problems: a tightly-coupled legacy monolith blocking cross-team independence, an inherited culture that treated legacy stability as a reason to avoid tests, and an emerging need to govern \acr{AI}-assisted development responsibly at scale.}
 \begin{itemize}
-  \item Migrated login handling out of the monolith; chose an event-based design over direct service coupling, enabling other teams to add post-login behaviour autonomously without coordination overhead.
-  \item Demonstrated test-gated automatic releases on a legacy service; the approach spread organically, leading to an invitation to join the 4-person company-wide quality community.
+  \item Migrated login handling out of the Java monolith into a new Go service; chose an event-based design over direct service coupling, enabling other teams to add post-login behaviour autonomously without coordination overhead.
+  \item Demonstrated test-gated automatic releases on a legacy Kotlin service; the approach spread organically, leading to an invitation to join the 4-person company-wide quality community.
   \item Owns quality and security constraints for \acr{AI}-assisted code generation (Claude) company-wide; introduced promptfoo as a pre-release gate for Claude Code skills before company-wide distribution.
   \item Maintains systems at scale (20M+ users, 95k+ req/s) across Go, Java, Kotlin, and Python --- edge router, GraphQL connectors, and the monolith-to-microfrontend migration.
 \end{itemize}
@@ -91,9 +91,9 @@ I specialize in simplifying architectures that have grown too complex for the te
 {\bodytext{
 \textit{The core problems: a microservices architecture collapsing under its own weight --- a feature as simple as showing a doctor their patient list took 6 to 8 months to ship, infrastructure costs exceeded \$2M annually, deployments were quarterly, and onboarding a new developer took nearly a year.}
 \begin{itemize}
-  \item Diagnosed the shared commons library as the most immediate drag --- accumulated RestTemplate clients for every service in the landscape, loaded by every microservice regardless of need; stripped it down, cutting individual service footprint by 20\%+.
+  \item Diagnosed the shared commons library as the most immediate drag --- accumulated RestTemplate clients for every Kotlin service in the landscape, loaded by every microservice regardless of need; stripped it down, cutting individual service footprint by 20\%+.
   \item Standardized Git workflows, code review practices, and \acr{CI/CD} pipelines across all backend teams.
-  \item Bet on a modular monolith over the prevailing microservices orthodoxy; consolidated 70+ services into a single event-driven architecture with 5 bounded domains and 3 anti-corruption layers, applying Domain-Driven Design throughout.
+  \item Bet on a modular monolith over the prevailing microservices orthodoxy; consolidated 70+ Kotlin services into a single event-driven architecture with 5 bounded domains and 3 anti-corruption layers, applying Domain-Driven Design throughout.
   \item The consolidation cut infrastructure costs from \$2M+ to under \$300K (85\%+ savings), accelerated deployments from quarterly to every merge, and reduced onboarding from nearly a year to days. The company, which had entered bankruptcy, recovered and resumed growth.
 \end{itemize}
 }}
@@ -112,7 +112,7 @@ I specialize in simplifying architectures that have grown too complex for the te
 {\bodytext{
 \textit{The core problems: an integration strategy built around one-off scenario forms with no reusable components across them, and a release process so fragile that every deployment broke something.}
 \begin{itemize}
-  \item Diagnosed that the scenario forms shared underlying integration components (identity verification, \acr{SMS}/email, document signing) being reimplemented repeatedly; redesigned the approach around composable connectors --- personally built 5, the template grew to 12 with the team, and enabled 20+ connectors after departure.
+  \item Diagnosed that the scenario forms shared underlying Java integration components (identity verification, \acr{SMS}/email, document signing) being reimplemented repeatedly; redesigned the approach around composable connectors --- personally built 5, the template grew to 12 with the team, and enabled 20+ connectors after departure.
   \item Built the Angular frontend components for the connector layer personally --- identity verification flows, multi-step onboarding forms, and \acr{SMS}/email journeys --- so each connector was a deployable end-to-end banking journey, not just a backend integration point.
   \item Diagnosed the release failures as a testing gap; introduced acceptance tests and hands-on testing practices across the team, cutting re-releases from twice weekly to once per quarter across 5 banking clients.
 \end{itemize}
